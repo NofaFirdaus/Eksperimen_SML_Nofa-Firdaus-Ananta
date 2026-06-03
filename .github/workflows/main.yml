@@ -1,0 +1,17 @@
+name: Automated Preprocessing - HOK Reviews
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'hok_reviews.csv'
+      - 'preprocessing/automate_nofa-firdaus-ananta.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  preprocessing:
+    runs-on: ubuntu-latest
